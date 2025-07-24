@@ -1,8 +1,8 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import GradientButton from "../components/gradientButton";
 import GameCard from "../components/gameCard";
+import GradientButton from "../components/gradientButton";
 import { storeColors } from "../theme";
 
 
@@ -14,10 +14,11 @@ export default function Index() {
   const featured = [
   {
       id: 1,
-      title: 'Zooba',
-      image: require('../assets/images/zooba.png'),
-      downloads: '200k',
+      title: "Alto's Adventure",
+      image: require('../assets/images/altosAdventure.png'),
+      downloads: '20k',
       stars: 4
+     
   },
   {
       id: 2,
@@ -36,9 +37,9 @@ export default function Index() {
   
   {
       id: 4,
-      title: "Alto's Adventure",
-      image: require('../assets/images/altosAdventure.png'),
-      downloads: '20k',
+      title: 'Zooba',
+      image: require('../assets/images/zooba.png'),
+      downloads: '200k',
       stars: 4
   },
 ]
@@ -97,7 +98,7 @@ const games = [
         <Text style={styles.headingTextCat}>Browse Games</Text>
       </View>
 
-      <View style={{ paddingLeft: 16 }}>
+      <View style={{ paddingLeft: 16, height: 60 }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {
             catagories.map(cat =>
@@ -118,11 +119,11 @@ const games = [
       </View>
 
       {/* Featured Row */}
-      <View style={{ paddingHorizontal: 16, marginTop: 16 }}>
+      <View style={{ paddingHorizontal: 16, marginTop: 16  }}>
         <Text style={styles.headingTextFeat}>
           Featured Games
         </Text>
-        <View style={{paddingLeft: 12}}>
+        <View style={{paddingLeft: 12, height: 260, paddingTop: 12}}> 
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             {
               featured.map((item,index) =>{
